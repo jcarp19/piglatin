@@ -1,33 +1,57 @@
-const { test, expect } = require("@jest/globals");
 const expectExport = require("expect");
-const piggy = require("./script");
+const translate = require("./script");
 
-// TEST FOR STARTING WITH VOWELS
+// Beginning with a vowel
 test("Apple to appleway", () => {
-    expect(piggy("Apple")).toBe("appleway");
+    expect(translate("Apple")).toBe("appleway");
 });
 
 test("eagle to eagleway", () => {
-    expectExport(piggy("eagle")).toBe("eagleway");
+    expectExport(translate("eagle")).toBe("eagleway");
 });
 
-test("orange to orangeway", () => {
-    expect(piggy("orange")).toBe("orangeway");
+test("ink to inkway", () => {
+    expect(translate("ink")).toBe("inkway");
 });
 
-// TESTS FOR STARTING WITH CONSONANTS
-test("banana to be ananabay", () => {
-    expect(piggy("banana")).toBe("ananabay");
+test("over to overway", () => {
+    expect(translate("over")).toBe("overway");
+});
+
+test("Urban to urbanway", () => {
+    expect(translate("Urban")).toBe("urbanway");
+});
+
+// Beginning with a consonant
+test("Banana to be ananabay", () => {
+    expect(translate("Banana")).toBe("ananabay");
 });
 
 test("cat to atcay", () => {
-    expect(piggy("cat")).toBe("atcay");
+    expect(translate("cat")).toBe("atcay");
 });
 
-test("christmas to itmaschray", () => {
-    expect(piggy("christmas")).toBe("istmaschray");
+test("dog to ogday", () => {
+    expect(translate("dog")).toBe("ogday");
 });
 
-test("psychology to ologypsychay", () => {
-    expect(piggy("psychology")).toBe("ologypsychay");
+test("MOUSE to ousemay", () => {
+    expect(translate("MOUSE")).toBe("ousemay");
+});
+
+// Beginning with 2 or more consonants
+test("bright to ightbray", () => {
+    expect(translate("bright")).toBe("ightbray");
+});
+
+test("close to oseclay", () => {
+    expect(translate("close")).toBe("oseclay");
+});
+
+test("chRIStmas to itmaschray", () => {
+    expect(translate("chRIStmas")).toBe("istmaschray");
+});
+
+test("Psychology to ologypsychay", () => {
+    expect(translate("Psychology")).toBe("ologypsychay");
 });

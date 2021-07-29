@@ -1,11 +1,12 @@
 "use strict";
 
-const piggy = (str) => {
-    // if word starts with a vowel
+const translate = (str) => {
+    
     str = str.toLowerCase();
+    
     const vowels = ["a", "e", "i", "o", "u"];
 
-    if (vowels.includes(str[0])) {
+    if (vowels.includes(str[0])) { // if word starts with a vowel
         return str + "way";
     } else { // if word starts with a consonant
         // make a variable to hold the consonants
@@ -22,4 +23,4 @@ const piggy = (str) => {
     };
 };
 
-module.exports = piggy;
+module.exports = translate;
